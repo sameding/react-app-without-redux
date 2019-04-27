@@ -3,6 +3,7 @@ import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import config from './config/config.js';
 
 class Restaurant extends Component {
 
@@ -27,7 +28,7 @@ class Restaurant extends Component {
 
   componentDidUpdate() {
     if(this.props.searchWord && this.props.searchWord.length > 3){
-        let url = 'http://opentable.herokuapp.com/api/restaurants?city='+this.props.searchWord+'&per_page=100';
+        let url = config.api_url+this.props.searchWord+'&per_page=100';
         axios({method: "get", crossdomain: true, url: url})
         .then((result) => {
             this.setState({data: result.data});
