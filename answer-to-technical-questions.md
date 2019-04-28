@@ -7,21 +7,22 @@
     this.setState({searchWord: event.target.value});
   };``
 
- ++ The rest parameter and spread operator as shown from the snippet taken from /src/REstaurant.js ``this.state = {
+    ++ The rest parameter and spread operator as shown from the snippet taken from /src/REstaurant.js ``this.state = {
           ...props,
           data: null
       }``
 
 3. Tracking issues on production can be achieved by doing the following:
 
+    ++ Check CPU and memory usage. Most server offer that functionality
 
-  ++ Check CPU and memory usage. Most server offer that functionality
-
-  ++ Using the logs to monitor errors. This can be achieved by logging all the requests to elastic search database. Then view monitoring data from Kibana where it’s easy to spot issues at a glance or delve into the system behaviour over time to diagnose operational issues. In addition to the built-in status warnings, it is also possible to set up custom alerts based on the data in the monitoring indices. 
+    ++ Using the logs to monitor errors. This can be achieved by logging all the requests to elastic search database. Then view monitoring data from Kibana where it’s easy to spot issues at a glance or delve into the system behaviour over time to diagnose operational issues. In addition to the built-in status warnings, it is also possible to set up custom alerts based on the data in the monitoring indices. 
 
 4. One way to improve this API is to add another response format such as XML. The fact is that there are still a lot of other applications outside that use XML. If it was possible to pass a parameter to specify the format to return it would be good.
 
   Another thing to add would be making it secure by using a simple token that is getting generated on the first hand and then used when requests are made
+
+  On the response it would be better to add what type of cuisine aand menus each restaurant provides. This informtion can help a customer narrow which restaaurant he or she wants to go to
 
 5. Description in JSON
 ``{
