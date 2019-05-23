@@ -1,4 +1,4 @@
-# bmo-test-front-end
+# react-without-redux
 
 This repo holds a sample code to use react with axio to request Open table restaurant API.
 
